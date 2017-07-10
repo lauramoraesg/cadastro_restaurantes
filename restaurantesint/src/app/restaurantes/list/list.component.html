@@ -1,0 +1,44 @@
+<section id="rest-list">
+  <div class="panel panel-default col-md-8 col-md-offset-2">
+    <div class="panel-heading">
+      <h3 class="panel-title">Restaurantes</h3>
+      <div class="pull-right">
+        <a routerLink="/restaurantes/new" class="btn btn-default btn-sm">
+          Novo
+        </a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+          <input type="text" class="form-control" id="pesquisa" placeholder="Pesquisar" [(ngModel)]="textoPesquisa">
+          <button type="button" class="btn btn-default" (click)="buscarRestaurante()">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th data-field="name" class="tabela-restaurante">Nome</th>
+          <th data-field="opcoes">Opções</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let q of restaurantes">
+          <td>{{ q.nome }}</td>
+
+          <td>
+            <a [routerLink]="['/restaurantes', q.id]"  class="glyphicon glyphicon-pencil">
+            </a>
+          </td>
+          <td>
+            <a (click)="deleteRestaurante(q)" class="glyphicon glyphicon-remove">
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

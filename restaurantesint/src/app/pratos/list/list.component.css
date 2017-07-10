@@ -1,0 +1,11 @@
+#pratos-list .coluna-restaurante{
+  width: 35%;
+}
+#pratos-list .coluna-prato-preco{
+  width: 25%;
+}
+
+#pratos-list .panel h3{
+  width: 80%;
+  display: inline-block;
+}

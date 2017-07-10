@@ -1,0 +1,22 @@
+<section id="rest-form">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <form #restauranteForm="ngForm" (ngSubmit)="save()">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          required
+          [(ngModel)]="restaurante.nome"
+          class="form-control"
+          placeholder="Nome do restaurante"
+          name="nome"
+          id="nome"
+          #name="ngModel">
+      </div>
+
+      <button class="btn btn-default" routerLink="/restaurantes">Cancelar</button>
+      <button class="btn btn-default" type="submit">Confirmar</button>
+    </form>
+  </div>
+</section>

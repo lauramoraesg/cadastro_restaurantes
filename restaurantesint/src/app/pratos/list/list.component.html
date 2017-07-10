@@ -1,0 +1,41 @@
+<section id="pratos-list">
+  <div class="panel panel-default col-md-8 col-md-offset-2">
+    <div class="panel-heading">
+      <h3 class="panel-title">Pratos</h3>
+      <div class="pull-right">
+        <a routerLink="/pratos/new" class="btn btn-default btn-sm">
+          Novo
+        </a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th class="coluna-restaurante">Restaurante</th>
+          <th class="coluna-prato-preco">Nome</th>
+          <th class="coluna-prato-preco">Preço</th>
+          <th>Opções</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let q of pratos">
+          <td>{{ q.restaurante_nome }}</td>
+          <td>{{ q.nome }}</td>
+          <td>{{ q.preco }}</td>
+
+          <td>
+            <a [routerLink]="['/pratos', q.id]" class="glyphicon glyphicon-pencil">
+            </a>
+          </td>
+          <td>
+            <a (click)="deletePrato(q)" class="glyphicon glyphicon-remove">
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

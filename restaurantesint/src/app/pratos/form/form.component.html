@@ -1,0 +1,22 @@
+<section id="pratos-form" class="container">
+    <h1>{{ title }}</h1>
+    <form (ngSubmit)="save()">
+      <div class="form-group">
+        <label for="nome">Restaurante</label>
+        <select required [(ngModel)]="prato.restaurante_id" class="form-control" name="restaurantes" id="restaurantes">
+          <option *ngFor="let r of restaurantes" [ngValue]='r.id'>{{r.nome}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" required [(ngModel)]="prato.nome" class="form-control" placeholder="Nome do prato" name="nome" id="nome">
+      </div>
+      <div class="form-group">
+        <label for="preco">Preço</label>
+        <input type="text" required [(ngModel)]="prato.preco" class="form-control" placeholder="Preço" name="preco" id="preco">
+      </div>
+
+      <button class="btn btn-default" routerLink="/pratos">Cancelar</button>
+      <button class="btn btn-default" type="submit">Confirmar</button>
+    </form>
+</section>

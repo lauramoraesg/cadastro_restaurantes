@@ -1,0 +1,13 @@
+#rest-list .tabela-restaurante{
+  width: 85%;
+}
+
+#rest-list  .panel h3{
+  width: 80%;
+  display: inline-block;
+}
+
+#rest-list #pesquisa{
+  width: 80%;
+  display: inline-block;
+}
