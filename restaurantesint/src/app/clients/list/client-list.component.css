@@ -1,0 +1,11 @@
+#clients-list .column-name{
+    width: 55%;
+}
+#clients-list .column-phone{
+    width: 25%;
+}
+
+#clients-list .panel h3{
+    width: 80%;
+    display: inline-block;
+}

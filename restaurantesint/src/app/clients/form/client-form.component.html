@@ -1,0 +1,40 @@
+<section id="client-form" class="container">
+    <h1>{{ title }}</h1>
+    <form (ngSubmit)="save()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" required [(ngModel)]="client.name" class="form-control" placeholder="Client's name" name="name" id="name">
+    </div>
+    <div class="form-group">
+        <label for="cep">CEP</label>
+        <input type="text" required [(ngModel)]="client.cep" class="form-control" placeholder="CEP" name="cep" id="cep" (focusout)="getAddress($event)">
+    </div>
+    <div class="form-group">
+        <label for="street">Street</label>
+        <input type="text" required [(ngModel)]="client.street" class="form-control" placeholder="Street" name="street" id="street">
+    </div>
+    <div class="form-group">
+        <label for="complement">Complement</label>
+        <input type="text" [(ngModel)]="client.complement" class="form-control" placeholder="Complement" name="complement" id="complement">
+    </div>
+    <div class="form-group">
+        <label for="neighborhood">Neighborhood</label>
+        <input type="text" required [(ngModel)]="client.neighborhood" class="form-control" placeholder="Neighborhood" name="neighborhood" id="neighborhood">
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" required [(ngModel)]="client.city" class="form-control" placeholder="City" name="city" id="city">
+    </div>
+    <div class="form-group">
+        <label for="province">Province</label>
+        <input type="text" required [(ngModel)]="client.province" class="form-control" placeholder="Province" name="province" id="province">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" required [(ngModel)]="client.phone" class="form-control" placeholder="Phone" name="phone" id="phone">
+    </div>
+
+    <button class="btn btn-default" routerLink="/clients">Cancelar</button>
+    <button class="btn btn-default" type="submit">Confirmar</button>
+    </form>
+</section>

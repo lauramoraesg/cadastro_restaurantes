@@ -1,19 +1,15 @@
 class PratosController < ApplicationController
   before_action :set_prato, only: [:show, :update, :destroy]
 
-  # GET /pratos
   def index
     @pratos = Prato.all
-
     render json: @pratos
   end
 
-  # GET /pratos/1
   def show
     render json: @prato
   end
 
-  # POST /pratos
   def create
     @prato = Prato.new(prato_params)
     if @prato.save
@@ -23,7 +19,6 @@ class PratosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /pratos/1
   def update
     if @prato.update(prato_params)
       render json: @prato
@@ -32,7 +27,6 @@ class PratosController < ApplicationController
     end
   end
 
-  # DELETE /pratos/1
   def destroy
     @prato.destroy
   end

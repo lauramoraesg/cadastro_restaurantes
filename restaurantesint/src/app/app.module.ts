@@ -16,6 +16,9 @@ import { HomeComponent } from './home/home.component';
 import { PratosComponent } from './pratos/list/list.component';
 import { PratoFormComponent } from './pratos/form/form.component';
 import { PratoService } from './pratos/shared/prato.service';
+import { ClientFormComponent } from './clients/form/client-form.component';
+import { ClientsComponent } from './clients/list/client-list.component';
+import { ClientService } from './clients/shared/client.service';
 
 // Adicionamos em imports a contant routing e tambem nosso service em Providers
 @NgModule({
@@ -25,7 +28,9 @@ import { PratoService } from './pratos/shared/prato.service';
     RestauranteFormComponent,
     HomeComponent,
     PratosComponent,
-    PratoFormComponent
+    PratoFormComponent,
+    ClientFormComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,7 @@ import { PratoService } from './pratos/shared/prato.service';
     HttpModule,
     routing
   ],
-  providers: [RestauranteService, PratoService],
+  providers: [RestauranteService, PratoService, ClientService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

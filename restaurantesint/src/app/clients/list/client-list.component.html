@@ -1,0 +1,39 @@
+<section id="clients-list">
+    <div class="panel panel-default col-md-8 col-md-offset-2">
+        <div class="panel-heading">
+            <h3 class="panel-title">Clients</h3>
+            <div class="pull-right">
+                <a routerLink="/clients/new" class="btn btn-default btn-sm">
+                    Novo
+                </a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th class="column-name">Name</th>
+                    <th class="column-phone">Phone</th>
+                    <th>Opções</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr *ngFor="let client of clients">
+                <td>{{ client.name }}</td>
+                <td>{{ client.phone }}</td>
+
+                <td>
+                    <a [routerLink]="['/clients', client.id]" class="glyphicon glyphicon-pencil">
+                    </a>
+                </td>
+                <td>
+                    <a (click)="deleteClient(client)" class="glyphicon glyphicon-remove">
+                    </a>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

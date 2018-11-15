@@ -8,6 +8,8 @@ import { RestauranteFormComponent } from './restaurantes/form/form.component';
 import { HomeComponent } from './home/home.component';
 import { PratosComponent } from './pratos/list/list.component';
 import { PratoFormComponent } from './pratos/form/form.component';
+import { ClientsComponent } from './clients/list/client-list.component';
+import { ClientFormComponent } from './clients/form/client-form.component';
 
 
 // Cria nossas Rotas
@@ -21,7 +23,11 @@ const appRoutes: Routes = [
   { path: 'pratos', component: PratosComponent},
   { path: 'pratos/new', component: PratoFormComponent},
   { path: 'pratos/:id', component: PratoFormComponent},
-  { path: 'pratos/:id/edit', component: PratoFormComponent}
+  { path: 'pratos/:id/edit', component: PratoFormComponent},
+  { path: 'clients', component: ClientsComponent },
+  { path: 'clients/new', component: ClientFormComponent},
+  { path: 'clients/:id', component: ClientFormComponent},
+  { path: 'clients/:id/edit', component: ClientFormComponent }
 ];
 
 // Exporta a constante routing para ser importada no arquivo app.module.ts
